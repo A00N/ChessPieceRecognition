@@ -4,7 +4,7 @@
 The aim of this project is to create an image recognition AI, that can identify chess pieces from images.
 
 ### Algorithms and data-structures
-
+OpenCV data-structure will be used.
 
 ### Time and space complexity
 
