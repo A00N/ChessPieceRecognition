@@ -3,7 +3,7 @@
 ### Overview
 Chess piece image recognition AI to recognize different chess pieces.
 
-###
+### Project definition
 [Project definition](https://github.com/A00N/ChessPieceRecognition/blob/main/Documentation/project_definition.md)
 
 ### Weekly reports
