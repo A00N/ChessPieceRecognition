@@ -10,7 +10,7 @@ The aim of this project is to create an image recognition AI, that can identify 
 
 
 ## Input/Output
-Input as image, output as text on commandline.
+Input as an image, output as text on commandline.
 
 ## References
 
@@ -18,5 +18,5 @@ Input as image, output as text on commandline.
 ## Language
 The program will be written in Python and documented in english.
 
-## Adminastrive stuff
+### Adminastrive stuff
 Curriculum: Bachelor of computer science.
