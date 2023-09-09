@@ -1,21 +1,21 @@
 # ChessPieceRecognition
 
-## Project definition
+### Project definition
 The aim of this project is to create an image recognition AI, that can identify chess pieces from images.
 
-## Algorithms and data-structures
+### Algorithms and data-structures
 
 
-## Time and space complexity
+### Time and space complexity
 
 
-## Input/Output
+### Input/Output
 Input as an image, output as text on commandline.
 
-## References
+### References
 
 
-## Language
+### Language
 The program will be written in Python and documented in english.
 
 ### Adminastrive stuff
