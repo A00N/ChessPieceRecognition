@@ -4,7 +4,7 @@
 The aim of this project is to create an image recognition AI, that can identify chess pieces from images.
 
 ### Algorithms and data-structures
-OpenCV data-structure will be used.
+Python libaries that will be used are tensorflow and keras.
 
 ### Time and space complexity
 
