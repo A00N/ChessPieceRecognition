@@ -1,10 +1,11 @@
-# ChessPieceRecognition
+# Number recognition
 
 ### Project definition
-The aim of this project is to create an image recognition AI, that can identify chess pieces from images.
+The aim of this project is to create an image recognition AI, that can identify numbers from 28x28 images.
 
 ### Algorithms and data-structures
-Python libaries that will be used are tensorflow and keras.
+Neural algorithm will be made from scratch
+
 
 ### Time and space complexity
 
