@@ -1,4 +1,3 @@
-pickle
 gzip
 numpy
 Pillow
