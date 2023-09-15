@@ -2,10 +2,12 @@ import pickle
 import gzip
 import numpy as np
 
+
 def load_data():
     with gzip.open("src/training_data/mnist.pkl.gz", "rb") as f:
         training_data, validation_data, test_data = pickle.load(f, encoding="latin1")
     return (training_data, validation_data, test_data)
+
 
 def load_data_wrapper():
     tr_d, va_d, te_d = load_data()
@@ -17,6 +19,7 @@ def load_data_wrapper():
     test_inputs = [np.reshape(x, (784, 1)) for x in te_d[0]]
     test_data = list(zip(test_inputs, te_d[1]))
     return (training_data, validation_data, test_data)
+
 
 def vectorized_result(j):
     e = np.zeros((10, 1))

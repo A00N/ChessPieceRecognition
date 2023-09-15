@@ -2,6 +2,7 @@ from PIL import Image
 import numpy as np
 import network
 
+
 def main(): 
     # Load trained network
     net = network.Network([784, 128, 64, 10]) # use same net as in start.py
@@ -17,6 +18,7 @@ def main():
     predicted_digit = np.argmax(net.feedforward(image))
 
     print("Predicted Digit:", predicted_digit)
+
 
 if __name__ == "__main__":
     main()

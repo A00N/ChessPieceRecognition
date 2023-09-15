@@ -2,6 +2,7 @@ import random
 import numpy as np
 import pickle
 
+
 class Network(object):
 
     @staticmethod
