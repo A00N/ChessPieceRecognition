@@ -9,4 +9,7 @@ Currently the  algorithm is able to recognize some images made in Aseprite that 
 - MNIST_loader file that loads the MNIST data
 - start.py file that generates the neural network and saves it using mnist loader and network scripts
 - imageRecognize function that loads the neural network file and uses it to guess the number
+- added some tests
+- createt CI pipeline
+- created codecov test reporting
   
