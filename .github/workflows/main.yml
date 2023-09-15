@@ -18,5 +18,9 @@ jobs:
           python-version: 3.8
       - name: Install requirements
         run: pip install -r requirements.txt
+      - name: Run tests
+        run: coverage run --branch -m pytest src/tests
+      - name: Coverage report
+        run: coverage report -m
       - name: Coverage report to Codecov
         run: bash <(curl -s https://codecov.io/bash)
