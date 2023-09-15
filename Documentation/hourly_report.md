@@ -16,4 +16,4 @@ date       | time | task |
 -----------|------|------|
 2023-09-12 | 1h   | Specified and edited project subject |
 2023-09-13 | 4h   | created foundation code|
-2023-09-15 | 4h   | continued to improve the foundation code |
+2023-09-15 | 7h   | continued to improve the foundation code |
