@@ -8,7 +8,7 @@ Image recognition AI that regonizes numbers from different 28x28 size images.
 
 
 ### User manual
-[Manual](https://github.com/A00N/NumberRecognition/blob/main/Documentation/User%20manual)
+[Manual](https://github.com/A00N/NumberRecognition/blob/main/Documentation/User%20manual.md)
 
 ### Weekly reports
 * [Week 1](https://github.com/A00N/NumberRecognition/blob/main/Documentation/weekly_report1.md)
