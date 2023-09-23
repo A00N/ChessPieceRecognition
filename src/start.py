@@ -10,10 +10,10 @@ print("Data loaded")
 net = network.Network([784, 30, 10])
 
 # Hyperparameters
-epochs = 30                  # Number of training epochs
-mini_batch_size = 10      # Mini-batch size for stochastic gradient descent
-learning_rate = 0.1        # Learning rate for weight updates
-lmbda = 5                 # L2 regularization strength
+epochs = 30                 # Number of training epochs
+mini_batch_size = 10        # Mini-batch size for stochastic gradient descent
+learning_rate = 0.1         # Learning rate for weight updates
+lmbda = 5                   # L2 regularization strength
 
 # Training the network
 net.SGD(training_data, epochs, mini_batch_size, learning_rate, lmbda, evaluation_data=validation_data)

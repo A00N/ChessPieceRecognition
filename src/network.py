@@ -1,6 +1,6 @@
 import random
-import numpy as np
 import pickle
+import numpy as np
 
 class CrossEntropyCost:
 
@@ -22,13 +22,10 @@ class Network:
     def __init__(self, sizes, cost=CrossEntropyCost):
         self.num_layers = len(sizes)
         self.sizes = sizes
-        self.weight_initializer()
         self.cost = cost
-
-    def weight_initializer(self):
         self.biases = [np.random.randn(y, 1) for y in self.sizes[1:]]
         self.weights = [np.random.randn(y, x)
-        for x, y in zip(self.sizes[:-1], self.sizes[1:])]
+                        for x, y in zip(self.sizes[:-1], self.sizes[1:])]
 
     def feedforward(self, a):
         for b, w in zip(self.biases, self.weights):
@@ -41,7 +38,8 @@ class Network:
         training_cost, training_accuracy = [], []
         for j in range(epochs):
             random.shuffle(training_data)
-            mini_batches = [training_data[k:k + mini_batch_size] for k in range(0, n, mini_batch_size)]
+            mini_batches = [training_data[k:k + mini_batch_size] 
+                            for k in range(0, n, mini_batch_size)]
             for mini_batch in mini_batches:
                 self.update_mini_batch(mini_batch, eta, lmbda, len(training_data))
             print("Epoch {} training complete".format(j))
