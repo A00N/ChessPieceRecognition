@@ -27,7 +27,7 @@ jobs:
       - name: Pylint
         run: |
           pylint_score=$(pylint src --score=n)
-          if [ "$pylint_score" -lt 8 ]; then
+          if [ "$pylint_score" \< "8" ]; then
             echo "Pylint score is below 8/10. Fail the workflow."
             exit 1
           else
