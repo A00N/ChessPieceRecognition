@@ -31,10 +31,13 @@ def test_save_and_load(simple_network, tmp_path):
 
 def test_accuracy(simple_network):
     # Test accuracy calculation method
-    test_data = [(np.array([[0], [0]]), np.array([[1], [0]])),
-                 (np.array([[1], [2]]), np.array([[0], [1]]))]
-    accuracy = simple_network.accuracy(test_data)
+    test_data = [(np.array([[0], [0]]), 0),  # Correct label is 0
+                 (np.array([[1], [2]]), 1)]  # Correct label is 1
+    results = [(np.argmax(simple_network.feedforward(x)), y) for (x, y) in test_data]
+    accuracy = simple_network.accuracy(results)
     assert 0 <= accuracy <= 1  # Check if accuracy is within a valid range
+
+
 
 def test_total_cost(simple_network):
     # Test total cost calculation method

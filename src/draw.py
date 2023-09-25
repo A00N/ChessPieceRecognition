@@ -39,7 +39,7 @@ class DigitRecognizerApp:
     def draw(self, event):
         if self.drawing:
             x, y = event.x, event.y
-            # Draw a small oval (sphere) in white
+            # Draw a small oval in white
             self.canvas.create_oval(
                 x - 5, y - 5, x + 5, y + 5,
                 fill="white", outline="white"
