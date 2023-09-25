@@ -6,7 +6,7 @@ import network
 def main(): 
     # Load trained network
     net = network.Network([784, 30, 10]) # use same net as in start.py
-    net.load('src/trained_networks/network_22_09_23.pkl')  # Load selected network version
+    net.load('src/trained_networks/network.pkl')  # Load selected network version
 
     # Load image
     image = Image.open('src/test_data/number.png').convert('L')  # Convert to grayscale

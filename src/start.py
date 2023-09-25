@@ -1,6 +1,7 @@
+import datetime
 import mnist_loader
 import network
-import datetime
+
 
 # Load data and create the network
 training_data, validation_data, test_data = mnist_loader.load_data_wrapper()
@@ -10,13 +11,16 @@ print("Data loaded")
 net = network.Network([784, 30, 10])
 
 # Hyperparameters
-epochs = 30                 # Number of training epochs
+epochs = 50                 # Number of training epochs
 mini_batch_size = 10        # Mini-batch size for stochastic gradient descent
 learning_rate = 0.1         # Learning rate for weight updates
 lmbda = 5                   # L2 regularization strength
 
 # Training the network
-net.SGD(training_data, epochs, mini_batch_size, learning_rate, lmbda, evaluation_data=validation_data)
+net.SGD(training_data, epochs, mini_batch_size, learning_rate, lmbda,
+         evaluation_data=validation_data,
+         monitor_training_accuracy=True,
+         monitor_evaluation_accuracy=True)
 
 print("Training completed")
 

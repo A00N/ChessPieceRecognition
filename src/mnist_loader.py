@@ -4,7 +4,7 @@ import numpy as np
 
 
 def load_data():
-    with gzip.open("src/training_data/mnist.pkl.gz", "rb") as f:
+    with gzip.open("src/training_data/mnist_expanded.pkl.gz", "rb") as f:
         training_data, validation_data, test_data = pickle.load(f, encoding="latin1")
     return (training_data, validation_data, test_data)
 
