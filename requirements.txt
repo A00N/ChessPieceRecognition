@@ -2,3 +2,4 @@ Pillow
 coverage
 numpy
 pytest
+pylint
