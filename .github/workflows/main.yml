@@ -25,4 +25,11 @@ jobs:
       - name: Coverage report to Codecov
         run: bash <(curl -s https://codecov.io/bash)
       - name: Pylint
-        run: pylint src
+        run: |
+          pylint_score=$(pylint src --score=n)
+          if [ "$pylint_score" -lt 8 ]; then
+            echo "Pylint score is below 8/10. Fail the workflow."
+            exit 1
+          else
+            echo "Pylint score is 8/10 or higher. Workflow passed."
+          fi
