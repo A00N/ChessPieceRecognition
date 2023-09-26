@@ -20,4 +20,7 @@ Use algorithm to guess the number:
 ```bash
 python3 imageRecognition.py
 ```
-
+Draw number and see if the algorithm gets it:
+```bash
+python3 draw.py
+```
