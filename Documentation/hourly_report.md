@@ -17,3 +17,17 @@ date       | time | task |
 2023-09-12 | 1h   | Specified and edited project subject |
 2023-09-13 | 4h   | created foundation code|
 2023-09-15 | 7h   | continued to improve the foundation code |
+
+## Week 3
+
+date       | time | task |
+-----------|------|------|
+2023-09-20 | 4h   | Improved cost function |
+2023-09-22 | 2h   | tried to add tests|
+2023-09-23 | 5h   | continued to improve network code |
+
+## Week 4
+
+date       | time | task |
+-----------|------|------|
+2023-09-12 | 4h   | fixed network code, added draw.py to instantly test network|
