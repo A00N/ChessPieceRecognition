@@ -7,8 +7,9 @@ class DigitRecognizerApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Digit Recognizer")
+        self.size = 112
 
-        self.canvas = tk.Canvas(root, width=112, height=112, bg="black")  # Set the canvas background to black
+        self.canvas = tk.Canvas(root, width=self.size, height=self.size, bg="black")  # Set the canvas background to black
         self.canvas.pack()
 
         self.label = tk.Label(root, text="", fg="black")  # Set label text color to white
@@ -25,11 +26,11 @@ class DigitRecognizerApp:
 
         # Initialize drawing
         self.drawing = False
-        self.image = Image.new("L", (112, 112), "black")  # Set the image background to black
+        self.image = Image.new("L", (self.size, self.size), "black")  # Set the image background to black
         self.draw = ImageDraw.Draw(self.image)
 
         # Load trained network
-        self.net = network.Network([112 * 112, 30, 10])
+        self.net = network.Network([self.size * self.size, 30, 10])
         self.net.load('src/trained_networks/network_25_09_23.pkl')
 
     def start_drawing(self, event):
