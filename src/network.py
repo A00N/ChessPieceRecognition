@@ -28,12 +28,18 @@ class Network(object):
         return self.sigmoid(z) * (1 - self.sigmoid(z))
 
     def __init__(self, sizes, cost=CrossEntropyCost):
+        """
+        Initialize the network with layer sizes and a cost function (CrossEntropyCost).
+        """
         self.num_layers = len(sizes)
         self.sizes = sizes
         self.weight_initializer()
         self.cost=cost
 
     def weight_initializer(self):
+        """
+        Initialize network weights and biases.
+        """
         self.biases = [np.random.randn(y, 1) for y in self.sizes[1:]]
         self.weights = [np.random.randn(y, x)/np.sqrt(x)
                         for x, y in zip(self.sizes[:-1], self.sizes[1:])]
@@ -43,6 +49,9 @@ class Network(object):
                         for x, y in zip(self.sizes[:-1], self.sizes[1:])]
 
     def feedforward(self, a):
+        """
+        Feed input 'a' forward through the network and return the output.
+        """
         for b, w in zip(self.biases, self.weights):
             a = self.sigmoid(np.dot(w, a)+b)
         return a
@@ -52,6 +61,9 @@ class Network(object):
             evaluation_data=None,
             monitor_evaluation_accuracy=False,
             monitor_training_accuracy=False):
+        """
+        Stochastic Gradient Descent (SGD) training method.
+        """
         if evaluation_data: n_data = len(evaluation_data)
         n = len(training_data)
         evaluation_cost, evaluation_accuracy = [], []
@@ -79,6 +91,9 @@ class Network(object):
             training_cost, training_accuracy
 
     def update_mini_batch(self, mini_batch, eta, lmbda, n):
+        """
+        Update network weights and biases based on a mini-batch of training data.
+        """
         nabla_b = [np.zeros(b.shape) for b in self.biases]
         nabla_w = [np.zeros(w.shape) for w in self.weights]
         for x, y in mini_batch:
@@ -89,8 +104,11 @@ class Network(object):
                         for w, nw in zip(self.weights, nabla_w)]
         self.biases = [b-(eta/len(mini_batch))*nb
                        for b, nb in zip(self.biases, nabla_b)]
-
+    
     def backprop(self, x, y):
+        """
+        Backpropagate the error through the network and calculate gradients.
+        """
         nabla_b = [np.zeros(b.shape) for b in self.biases]
         nabla_w = [np.zeros(w.shape) for w in self.weights]
         # feedforward
