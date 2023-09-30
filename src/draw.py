@@ -30,7 +30,7 @@ class DigitRecognizerApp:
         self.draw = ImageDraw.Draw(self.image)
 
         # Load trained network
-        self.net = network.Network([self.size * self.size, 30, 10])
+        self.net = network.Network([28 * 28, 30, 10])
         self.net.load('src/trained_networks/network_25_09_23.pkl')
 
     def start_drawing(self, event):
