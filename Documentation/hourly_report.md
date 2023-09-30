@@ -31,3 +31,4 @@ date       | time | task |
 date       | time | task |
 -----------|------|------|
 2023-09-25 | 4h   | fixed network code, added draw.py to instantly test network|
+2023-09-29 | 4h   | made more tests, which are still under validation |
