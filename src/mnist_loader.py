@@ -2,13 +2,18 @@ import pickle
 import gzip
 import numpy as np
 
-
+"""
+Loads database and returns  3 parameters: training data, validation data and test data.
+"""
 def load_data():
     with gzip.open("src/training_data/mnist_expanded.pkl.gz", "rb") as f:
         training_data, validation_data, test_data = pickle.load(f, encoding="latin1")
     return (training_data, validation_data, test_data)
 
 
+"""
+Wraps data as vectors and returns them.
+"""
 def load_data_wrapper():
     tr_d, va_d, te_d = load_data()
     training_inputs = [np.reshape(x, (784, 1)) for x in tr_d[0]]
