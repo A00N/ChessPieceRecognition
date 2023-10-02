@@ -14,6 +14,7 @@ Image recognition AI that regonizes numbers from different 28x28 size images.
 * [Week 1](https://github.com/A00N/NumberRecognition/blob/main/Documentation/weekly_report1.md)
 * [Week 2](https://github.com/A00N/NumberRecognition/blob/main/Documentation/weekly_report2.md)
 * [Week 3](https://github.com/A00N/NumberRecognition/blob/main/Documentation/weekly_report3.md)
+* [Week 4](https://github.com/A00N/NumberRecognition/blob/main/Documentation/weekly_report4.md)
   
 ### Hourly reports
 * [Hourly reports](https://github.com/A00N/NumberRecognition/blob/main/Documentation/hourly_report.md)
