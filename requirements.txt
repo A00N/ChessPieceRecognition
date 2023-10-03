@@ -3,3 +3,4 @@ coverage
 numpy
 pytest
 pylint
+opencv-python
