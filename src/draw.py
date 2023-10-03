@@ -63,17 +63,27 @@ class DigitRecognizerApp:
         self.label.config(text="")
     
     
-    """
-    This function rezises 112x112 drawn image to 28x28 before passing to neural network. Then it passes the image to neural network which predicts the drawn image.
-    """
+    
     def predict_digit(self):
-        # Resize and normalize the drawn image
+        """
+        This function rezises 112x112 drawn image to 28x28 and centrelizes it before passing to neural network. 
+        Then it passes the image to neural network which predicts the drawn image.
+        """
         resized_image = self.image.resize((28, 28), Image.BICUBIC)
-        centered_image = Image.new("L", (28, 28), "black")
-        centered_image.paste(resized_image, (0, 0))
-        centered_image = np.array(centered_image)
+        # Convert the resized image to a numpy array
+        resized_image_array = np.array(resized_image)
+        # Calculate the center of mass (centroid) of the digit image
+        M = cv2.moments(resized_image_array)
+        cx = int(M['m10'] / M['m00'])
+        cy = int(M['m01'] / M['m00'])
+        # Calculate the offset needed to move the center of mass to the center of the canvas
+        offset_x = 14 - cx 
+        offset_y = 14 - cy
+        # Create a translation matrix
+        translation_matrix = np.float32([[1, 0, offset_x], [0, 1, offset_y]])
+        # Apply the offset to the digit image
+        centered_image = cv2.warpAffine(resized_image_array, translation_matrix, (28, 28))
         centered_image = centered_image.reshape((28 * 28, 1)) / 255.0
-
         predicted_digit = np.argmax(self.net.feedforward(centered_image))
         self.label.config(text=f"Predicted Digit: {predicted_digit}")
 
