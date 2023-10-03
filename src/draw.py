@@ -39,6 +39,10 @@ class DigitRecognizerApp:
         self.drawing = True
         self.last_x, self.last_y = event.x, event.y
 
+
+    """
+    Function which handles the drawing to canvas.
+    """
     def draw(self, event):
         if self.drawing:
             x, y = event.x, event.y
@@ -50,12 +54,18 @@ class DigitRecognizerApp:
             # Draw on the image as well
             self.draw.ellipse([x - self.brush, y - self.brush, x + self.brush, y + self.brush], fill="white", outline="white")
 
+
+    """
+    Cleares canvas.
+    """
     def clear_canvas(self):
         self.canvas.delete("all")
         self.image = Image.new("L", (self.size, self.size), "black")
         self.draw = ImageDraw.Draw(self.image)
         self.label.config(text="")
-
+    
+    
+    
     def predict_digit(self):
         # Resize the drawn image to 28x28 pixels
         resized_image = self.image.resize((28, 28), Image.BICUBIC)
