@@ -18,6 +18,7 @@ Book made by Michael Nielsen (2015) is used as main source.
 http://neuralnetworksanddeeplearning.com/chap1.html
 
 Other sources:
+
 3Blue1Browns youtube videos.
 
 https://www.youtube.com/@3blue1brown/featured
