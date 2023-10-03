@@ -8,8 +8,8 @@ class DigitRecognizerApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Digit Recognizer")
-        self.size = 560
-        self.brush = 20
+        self.size = 280
+        self.brush = 10
 
         self.canvas = tk.Canvas(root, width=self.size, height=self.size, bg="black")  # Set the canvas background to black
         self.canvas.pack()
