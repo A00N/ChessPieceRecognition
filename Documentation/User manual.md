@@ -16,11 +16,11 @@ cd src
 python3 start.py
 ```
 
-Use algorithm to guess the number:
+Use algorithm on existing image to try recognize the number:
 ```bash
 python3 imageRecognition.py
 ```
-Draw number and see if the algorithm gets it:
+Draw number on tkinter GUI application and see if the algorithm gets it:
 ```bash
 python3 draw.py
 ```
