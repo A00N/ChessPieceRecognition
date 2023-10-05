@@ -1,15 +1,22 @@
 import tkinter as tk
 from PIL import Image, ImageDraw, ImageOps
 import numpy as np
-import network
 import cv2
+import network
+
 
 class DigitRecognizerApp:
     def __init__(self, root):
+        """
+        The main application for recognizing hand-drawn digits using a neural network.
+
+        Args:
+            root (tk.Tk): The root window of the application.
+        """
         self.root = root
         self.root.title("Digit Recognizer")
-        self.size = 280
-        self.brush = 10
+        self.size = 140
+        self.brush = 5
 
         self.canvas = tk.Canvas(root, width=self.size, height=self.size, bg="black")  # Set the canvas background to black
         self.canvas.pack()
@@ -36,14 +43,22 @@ class DigitRecognizerApp:
         self.net.load('src/trained_networks/network_25_09_23.pkl')
 
     def start_drawing(self, event):
+        """
+        Start drawing when the mouse button is pressed.
+
+        Args:
+            event: The mouse button press event.
+        """
         self.drawing = True
         self.last_x, self.last_y = event.x, event.y
 
-
-    """
-    Function which handles the drawing to canvas.
-    """
     def draw(self, event):
+        """
+        Handle the drawing on the canvas when the mouse is moved.
+
+        Args:
+            event: The mouse movement event.
+        """
         if self.drawing:
             x, y = event.x, event.y
             # Draw a small oval in white
@@ -54,19 +69,19 @@ class DigitRecognizerApp:
             # Draw on the image as well
             self.draw.ellipse([x - self.brush, y - self.brush, x + self.brush, y + self.brush], fill="white", outline="white")
 
-
-    """
-    Cleares canvas.
-    """
     def clear_canvas(self):
+        """
+        Clear the canvas by deleting all drawings and resetting the image.
+        """
         self.canvas.delete("all")
         self.image = Image.new("L", (self.size, self.size), "black")
         self.draw = ImageDraw.Draw(self.image)
         self.label.config(text="")
-    
-    
-    
+
     def predict_digit(self):
+        """
+        Predict the digit drawn on the canvas using the trained neural network.
+        """
         # Resize the drawn image to 28x28 pixels
         resized_image = self.image.resize((28, 28), Image.BICUBIC)
         # Convert the resized image to a numpy array
