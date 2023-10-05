@@ -18,6 +18,8 @@ jobs:
           python-version: 3.8
       - name: Install requirements
         run: pip install -r requirements.txt
+      - name: Upgrade libaries
+        run: pip install -r requirements.txt --upgrade
       - name: Run tests
         run: coverage run --branch -m pytest src/tests
       - name: Coverage report
