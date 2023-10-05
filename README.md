@@ -3,7 +3,7 @@
 ### Overview
 Image recognition AI that regonizes numbers from different 28x28 size images.
 
-![](https://github.com/A00N/NumberRecognition/Documentation/Material/digitrec.gif)
+![](https://github.com/A00N/NumberRecognition/blob/main/Documentation/Material/digitrec.gif)
 
 ### Project definition
 * [Project definition](https://github.com/A00N/NumberRecognition/blob/main/Documentation/project_definition.md)
