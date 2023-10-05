@@ -14,7 +14,6 @@ Input as an image or by drawing it on tkinet based GUI app, output as text on co
 
 ## Sources
 Book made by Michael Nielsen (2015) is used as main source.
-
 http://neuralnetworksanddeeplearning.com/chap1.html
 
 ### Other sources:
