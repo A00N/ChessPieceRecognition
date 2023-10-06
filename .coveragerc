@@ -1,3 +1,3 @@
 [run]
 source = src
-
+omit = src/tests/**,src/**/__init__.py,src/draw.py,src/imageRecognition.py,src/start.py
