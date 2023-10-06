@@ -4,7 +4,7 @@
 The aim of this project is to create an image recognition AI, that can identify numbers from either existing images, or self drawn ones.
 
 ## Algorithms and data-structures
-Neural algorithm will be made from scratch. Networks ability to recoqnize numers in images is based on stochastic gradient descent.
+Neural algorithm will be made from scratch. Networks ability to recoqnize numers in images is based on stochastic gradient descent and feedforwarding.
 
 ## Time and space complexity
 Neural network works instantly, and does not take any time on making the prediction.
