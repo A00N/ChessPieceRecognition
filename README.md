@@ -1,7 +1,8 @@
 # Number recognition AI
 [![CI](https://github.com/A00N/NumberRecognition/actions/workflows/main.yml/badge.svg)](https://github.com/A00N/NumberRecognition/actions/workflows/main.yml) [![codecov](https://codecov.io/gh/A00N/NumberRecognition/graph/badge.svg?token=RXJIL4GAKZ)](https://codecov.io/gh/A00N/NumberRecognition)
 ### Overview
-Image recognition AI that regonizes numbers from different 28x28 size images.
+Image recognition AI that regonizes numbers from images.
+Made from scratch.
 
 ![](https://github.com/A00N/NumberRecognition/blob/main/Documentation/Material/digitrec.gif)
 
