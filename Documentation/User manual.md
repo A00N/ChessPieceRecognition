@@ -2,7 +2,7 @@
 
 clone the git repository:
 ```bash
-https://github.com/A00N/NumberRecognition.git
+git clone https://github.com/A00N/NumberRecognition.git
 ```
 
 Download required packages:
