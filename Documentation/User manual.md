@@ -10,7 +10,7 @@ Download required packages:
 pip install -r requirements.txt
 ```
 
-Generate neural network:
+To genenerate a new neural network:
 ```bash
 cd src
 python3 start.py
