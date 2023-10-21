@@ -19,7 +19,7 @@ Made from scratch.
 * [Manual](https://github.com/A00N/NumberRecognition/blob/main/Documentation/User%20manual.md)
 
 ### Weekly report
-* [Latest week report (5)](https://github.com/A00N/NumberRecognition/blob/main/Documentation/weekly_report5.md)
+* [Latest week report (5)](https://github.com/A00N/NumberRecognition/blob/main/Documentation/weekly_report7.md)
   
 ### Hourly reports
 * [Hourly reports](https://github.com/A00N/NumberRecognition/blob/main/Documentation/hourly_report.md)
