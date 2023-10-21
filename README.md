@@ -9,17 +9,13 @@ Made from scratch.
 ### Project definition
 * [Project definition](https://github.com/A00N/NumberRecognition/blob/main/Documentation/project_definition.md)
   
-### Testing document
+### Documents
 * [Testing](https://github.com/A00N/NumberRecognition/blob/main/Documentation/testing_document.md)
 
-### Implementing document
 * [Implementing](https://github.com/A00N/NumberRecognition/blob/main/Documentation/Implementation_document.md)
   
-### User manual
 * [Manual](https://github.com/A00N/NumberRecognition/blob/main/Documentation/User%20manual.md)
 
-### Weekly report
 * [Latest week report (5)](https://github.com/A00N/NumberRecognition/blob/main/Documentation/weekly_report7.md)
   
-### Hourly reports
 * [Hourly reports](https://github.com/A00N/NumberRecognition/blob/main/Documentation/hourly_report.md)
