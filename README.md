@@ -6,10 +6,9 @@ Made from scratch.
 
 ![](https://github.com/A00N/NumberRecognition/blob/main/Documentation/Material/digitrec.gif)
 
-### Project definition
-* [Project definition](https://github.com/A00N/NumberRecognition/blob/main/Documentation/project_definition.md)
-  
 ### Documents
+* [Project definition](https://github.com/A00N/NumberRecognition/blob/main/Documentation/project_definition.md)
+
 * [Testing](https://github.com/A00N/NumberRecognition/blob/main/Documentation/testing_document.md)
 
 * [Implementing](https://github.com/A00N/NumberRecognition/blob/main/Documentation/Implementation_document.md)
